@@ -1,0 +1,39 @@
+<%- include('layout/header') %>
+
+<div class="conatiner">
+  <div class="row">
+    <div class="col-lg-4 mx-auto mt-4">
+        <div class="card shadow">
+            <div class="card-header bg-primary">
+                <h3 class="text-light">Add New Product</h3>
+            </div>
+            <div class="card-body p-4">
+                <form action="/add" method="post" id="add-form" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" class="form-control from-control-lg" placeholder="Enter Name" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">Description</label>
+                        <input type="text" name="desc" class="form-control from-control-lg" placeholder="Product Description" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">Price</label>
+                        <input type="text" name="price" class="form-control from-control-lg" placeholder="Enter Price" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">Select Image</label>
+                        <input type="file" name="image" class="form-control from-control-lg"required />
+                    </div>
+                    <div class="mb-3 d-grid">
+                        <input type="submit" name="submit" value="Add Product" class="btn btn-primary btn-lg" />
+                    </div>
+                </form>
+            </div>
+        </div>
+     
+    </div>
+  </div>
+</div>
+
+<%- include('layout/footer') %>
